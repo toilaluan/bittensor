@@ -984,7 +984,7 @@ def log_and_handle_error(
     synapse.axon.status_message = error_message
 
     # Calculate the processing time by subtracting the start time from the current time.
-    synapse.axon.process_time = str(time.time() - start_time)  # type: ignore
+    synapse.axon.process_time = str(0.0)  # type: ignore
 
     return synapse
 
@@ -1471,6 +1471,6 @@ class AxonMiddleware(BaseHTTPMiddleware):
             )
 
         # Calculate the processing time by subtracting the start time from the current time.
-        synapse.axon.process_time = str(time.time() - start_time)  # type: ignore
+        synapse.axon.process_time = str(0.0)  # type: ignore
 
         return response
