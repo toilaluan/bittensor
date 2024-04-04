@@ -528,7 +528,7 @@ class dendrite(torch.nn.Module):
                 self.process_server_response(response, json_response, synapse)
 
             # Set process time and log the response
-            synapse.dendrite.process_time = str(0)  # type: ignore
+            synapse.dendrite.process_time = str(0.0)  # type: ignore
 
         except Exception as e:
             self._handle_request_errors(synapse, request_name, e)
@@ -613,7 +613,7 @@ class dendrite(torch.nn.Module):
                 self.process_server_response(response, json_response, synapse)
 
             # Set process time and log the response
-            synapse.dendrite.process_time = str(0)  # type: ignore
+            synapse.dendrite.process_time = str(0.0)  # type: ignore
 
         except Exception as e:
             self._handle_request_errors(synapse, request_name, e)
